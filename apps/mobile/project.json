@@ -1,0 +1,23 @@
+{
+  "name": "mobile",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/mobile",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/expo:build",
+      "options": {
+        "outputPath": "apps/mobile/dist"
+      }
+    },
+    "serve": {
+      "executor": "@nx/expo:start",
+      "options": {
+        "platform": "ios"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}

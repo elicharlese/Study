@@ -1,0 +1,27 @@
+{
+  "name": "desktop",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/desktop",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/desktop",
+        "main": "apps/desktop/src/main.ts",
+        "tsConfig": "apps/desktop/tsconfig.app.json",
+        "assets": ["apps/desktop/src/assets"]
+      }
+    },
+    "serve": {
+      "executor": "@nx/node:execute",
+      "options": {
+        "buildTarget": "desktop:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  }
+}
