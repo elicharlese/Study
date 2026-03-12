@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "cd apps/web && next dev --turbopack",
+    "dev": "cd apps/web && next dev -p 5000 -H 0.0.0.0",
     "build": "cd apps/web && next build",
-    "start": "cd apps/web && next start",
+    "start": "cd apps/web && next start -p 5000 -H 0.0.0.0",
     "lint": "cd apps/web && next lint",
     "web": "cd apps/web && next dev --turbopack",
     "desktop": "echo 'Desktop app not configured'",
